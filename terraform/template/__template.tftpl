@@ -1,0 +1,27 @@
+module "${module_name}" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "${account_email}"
+    AccountName               = "${account_name}"
+    ManagedOrganizationalUnit = "${managed_ou}"
+    SSOUserEmail              = "${sso_user_email}"
+    SSOUserFirstName          = "${sso_user_first_name}"
+    SSOUserLastName           = "${sso_user_last_name}"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT-01"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "Kaleb Wade"
+    change_reason       = "Test account deployment via AFT"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "${account_customizations_name}"
+}
