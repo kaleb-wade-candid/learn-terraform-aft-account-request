@@ -23,5 +23,5 @@ module "sandbox-aft-test-04" {
     group = "non-prod"
   }
 
-  account_customizations_name = "developer-sandbox"
+  account_customizations_name = "sandbox"
 }
